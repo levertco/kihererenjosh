@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leverts Google Map API</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Levert's Test Google Map</h1>
+     <div class="navigate">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="Skills.html">SKILLS</a></li>
+          <li><a href="maps.html">Google Maps</a></li>
+          <li><a href="gallerypage.html">Gallerypage</a></li>
+        </ul>
+      </div>
+  <div id="map"></div>
+  <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:8,
+        center:{lat:-1.3002491,lng:36.7546175}
+      }
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      google.maps.event.addListener(map, 'click', function(event){
+        addMarker({coords:event.latLng});
+      });
+
+      var markers = [
+        {
+          coords:{lat:-1.3002491,lng:36.7546175},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+    size: new google.maps.Size(20, 32),
+
+          content:'<h1>Leverts Home</h1>'
+        },
+        {
+          coords:{lat:-1.220398,lng:36.8781836},
+          content:'<h2>Restaurant</h2>'
+        },
+        {
+          coords:{lat:42.7762,lng:-71.0773}
+        }
+      ];
+
+      for(var i = 0;i < markers.length;i++){
+        addMarker(markers[i]);
+      }
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+        });
+
+        if(props.iconImage){
+          marker.setIcon(props.iconImage);
+        }
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGYwnDhsFZAArRExjpIad0Bp69zA91Bc8&callback=initMap">
+    </script>
+</body>
+</html>

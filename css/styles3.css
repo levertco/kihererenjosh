@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0 ;
+}
+
+.body{
+    background-image: url("../images/skills.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+   
+
+    
+}
+.navigate ul li {  
+    display: inline;
+    list-style: none;
+  
+}
+.navigate{
+    position: absolute;
+    right:10px;
+    top :5vh
+}
+.navigate a{
+    text-decoration: none;
+    list-style: none;
+    color: antiquewhite;
+    padding: 10px;
+    position: relative;
+    right: 10px;
+}
+.logo{
+    position: absolute;
+    float: left;
+    left: 10px;
+    color: orange;
+    padding-top: 2px;
+    font-family: 'Dancing Script', cursive;
+    
+    
+}
+.navigate ul li :hover{
+    background-color: orange;
+    transition: 0.8s;
+    border-radius: 5px;
+}
+.skillset {
+    display: flex;
+    justify-content: space-around;
+}
+.textskill{
+  position: absolute;
+  left: 10vh;
+  top: 50vh;
+  color: aliceblue;
+   
+}
+.textskill h2 {
+    color: orange;
+    text-decoration-line: underline;
+}
+.textskill ul li{
+    list-style: none;
+
+  }
+  

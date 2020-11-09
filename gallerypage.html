@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>King Njosh Website</title>
+    <link href="css/styles4.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+      </div>
+      <div class="navigate">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="Skills.html">SKILLS</a></li>
+          <li><a href="gallerypage.html">Gallerypage</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="intro">
+    <h1>The Gallerypage</h1>
+    </div>
+      
+      <style>
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  max-height: 800px;    
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\14.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\13.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\12.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+      
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\14.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\13.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\12.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\5.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\6.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\7.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\8.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\9.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\10.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\11.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\2.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\3.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\4.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\15.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\16.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\17.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\18.jpg" >
+    <img src="C:\Users\lever\OneDrive\Documents\Njosh\doitright-main\portfolio-master\portfolio-master\images\19.jpg" >
+      
+  </body>
+</html>
